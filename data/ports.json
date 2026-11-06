@@ -1,0 +1,12 @@
+{
+  "_note": "INDICATIVE PLACEHOLDER LIMITS. Verify every value against the port authority / Ministry of Ports, Shipping & Waterways before presenting. 'verified' must be set true only after you check the source.",
+  "ports": {
+    "Paradip":        {"max_loa": 300, "max_beam": 50, "max_draft": 16.5, "discharge_tpd": 40000, "base_wait_days": 2.5, "verified": false, "source": "paradipport.gov.in", "lat": 20.2644, "lon": 86.6698, "state": "Odisha"},
+    "Visakhapatnam":  {"max_loa": 300, "max_beam": 50, "max_draft": 15.5, "discharge_tpd": 35000, "base_wait_days": 2.0, "verified": false, "source": "vizagport.com", "lat": 17.6868, "lon": 83.2185, "state": "Andhra Pradesh"},
+    "Gangavaram":     {"max_loa": 300, "max_beam": 50, "max_draft": 18.0, "discharge_tpd": 45000, "base_wait_days": 1.5, "verified": false, "source": "gangavaramport.com", "lat": 17.6186, "lon": 83.2384, "state": "Andhra Pradesh"},
+    "Gopalpur":       {"max_loa": 235, "max_beam": 38, "max_draft": 12.0, "discharge_tpd": 20000, "base_wait_days": 1.5, "verified": false, "source": "gopalpurport.com", "lat": 19.3039, "lon": 84.9669, "state": "Odisha"},
+    "Dhamra":         {"max_loa": 300, "max_beam": 50, "max_draft": 17.5, "discharge_tpd": 38000, "base_wait_days": 1.8, "verified": false, "source": "dhamraport.com", "lat": 20.8033, "lon": 86.9739, "state": "Odisha"},
+    "Sagar-Sandheads":{"max_loa": 300, "max_beam": 50, "max_draft": 13.0, "discharge_tpd": 18000, "base_wait_days": 3.0, "verified": false, "source": "kolkataporttrust.gov.in", "lat": 21.6500, "lon": 88.0500, "state": "West Bengal"},
+    "Haldia":         {"max_loa": 200, "max_beam": 32, "max_draft": 9.0,  "discharge_tpd": 20000, "base_wait_days": 3.5, "verified": false, "source": "kolkataporttrust.gov.in", "lat": 22.0256, "lon": 88.0863, "state": "West Bengal"}
+  }
+}

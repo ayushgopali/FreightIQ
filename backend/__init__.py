@@ -1,0 +1,1 @@
+"""FreightIQ FastAPI Backend Service."""
