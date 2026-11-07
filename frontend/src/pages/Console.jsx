@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 import Logo from "@/components/Logo";
 import DecidePanel from "@/components/console/DecidePanel";
 import PortScreenPanel from "@/components/console/PortScreenPanel";
 import BacktestPanel from "@/components/console/BacktestPanel";
 import TimeMachinePanel from "@/components/console/TimeMachinePanel";
+import { Methodology } from "@/pages/Methodology";
 import { getMeta } from "@/lib/api";
 
 const TABS = [
@@ -13,15 +14,32 @@ const TABS = [
   { id: "port-screen", label: "Port Screen" },
   { id: "backtest", label: "Backtest" },
   { id: "time-machine", label: "Time Machine" },
+  { id: "methodology", label: "Methodology" },
 ];
 
-export default function Console() {
-  const [tab, setTab] = useState("decide");
+export default function Console({ initialTab }) {
+  const location = useLocation();
+
+  const getStartingTab = React.useCallback(() => {
+    if (initialTab) return initialTab;
+    const path = location.pathname.toLowerCase();
+    if (path.includes("port")) return "port-screen";
+    if (path.includes("evidence") || path.includes("backtest")) return "backtest";
+    if (path.includes("demo") || path.includes("time-machine")) return "time-machine";
+    if (path.includes("method")) return "methodology";
+    return "decide";
+  }, [initialTab, location.pathname]);
+
+  const [tab, setTab] = useState(getStartingTab);
   const [meta, setMeta] = useState(null);
 
   useEffect(() => {
     getMeta().then(setMeta).catch(() => {});
   }, []);
+
+  useEffect(() => {
+    setTab(getStartingTab());
+  }, [getStartingTab]);
 
   return (
     <div className="min-h-screen bg-ink-900 text-slate-100">
@@ -69,6 +87,7 @@ export default function Console() {
         {meta && tab === "port-screen" && <PortScreenPanel meta={meta} />}
         {tab === "backtest" && <BacktestPanel />}
         {meta && tab === "time-machine" && <TimeMachinePanel meta={meta} />}
+        {tab === "methodology" && <Methodology />}
       </main>
     </div>
   );

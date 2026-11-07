@@ -1,9 +1,10 @@
-import React, { useEffect } from "react";
+import React, { useEffect, Suspense } from "react";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import Lenis from "lenis";
 import Landing from "@/pages/Landing";
-import Console from "@/pages/Console";
 import ErrorBoundary from "@/components/ErrorBoundary";
+
+const Console = React.lazy(() => import("@/pages/Console"));
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -43,10 +44,19 @@ export default function App() {
       <BrowserRouter>
         <SmoothScroll />
         <ScrollToTop />
-        <Routes>
-          <Route path="/" element={<Landing />} />
-          <Route path="/console" element={<Console />} />
-        </Routes>
+        <Suspense fallback={<div className="min-h-screen bg-[#0B0F1A]" />}>
+          <Routes>
+            <Route path="/" element={<Landing />} />
+            <Route path="/console" element={<Console />} />
+            <Route path="/decide" element={<Console initialTab="decide" />} />
+            <Route path="/ports" element={<Console initialTab="port-screen" />} />
+            <Route path="/evidence" element={<Console initialTab="backtest" />} />
+            <Route path="/method" element={<Console initialTab="methodology" />} />
+            <Route path="/methodology" element={<Console initialTab="methodology" />} />
+            <Route path="/demo" element={<Console initialTab="time-machine" />} />
+            <Route path="/brief" element={<Console initialTab="methodology" />} />
+          </Routes>
+        </Suspense>
       </BrowserRouter>
     </ErrorBoundary>
   );

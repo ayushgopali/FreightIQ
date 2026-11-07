@@ -1,0 +1,106 @@
+/* FreightIQ Dark Maritime Theme & Design Tokens
+   Matching the terminal aesthetics with high-contrast cobalt & lime
+*/
+
+:root {
+  --bg: #030407;
+  --surface: #0B0F1A;
+  --surface-glass: rgba(11, 15, 26, 0.82);
+  --cobalt: #1558C9;
+  --cobalt-bright: #2F7BFF;
+  --cobalt-text: #8DB4F5;
+  --lime: #D4FF24;
+  --lime-hover: #C5F213;
+  --text: #F4F7FB;
+  --text-dim: #A3ADBF;
+  --border: rgba(255, 255, 255, 0.08);
+  --border-strong: rgba(255, 255, 255, 0.16);
+  --mint: #10B981;
+  --coral: #EF4444;
+
+  /* Typography */
+  --font-heading: "Archivo", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+.landing {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Color grading & atmospheric overlays for the rendered port still */
+.port-cinematic-grade {
+  filter: contrast(1.12) brightness(0.96) saturate(0.88);
+}
+
+/* Subtle Vignette */
+.port-vignette {
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgba(3, 4, 7, 0) 45%,
+    rgba(3, 4, 7, 0.42) 75%,
+    rgba(3, 4, 7, 0.88) 100%
+  );
+}
+
+/* Dark gradient backing for crisp text legibility (Phase A Beats) */
+.story-text-gradient-desktop {
+  background: linear-gradient(
+    90deg,
+    rgba(3, 4, 7, 0.94) 0%,
+    rgba(3, 4, 7, 0.82) 42%,
+    rgba(3, 4, 7, 0.35) 75%,
+    rgba(3, 4, 7, 0) 100%
+  );
+}
+
+.story-text-gradient-mobile {
+  background: linear-gradient(
+    0deg,
+    rgba(3, 4, 7, 0.98) 0%,
+    rgba(3, 4, 7, 0.92) 55%,
+    rgba(3, 4, 7, 0.45) 85%,
+    rgba(3, 4, 7, 0) 100%
+  );
+}
+
+/* 3% Film Grain */
+.film-grain {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.035'/%3E%3C/svg%3E");
+}
+
+/* Lamp Glow Animation */
+@keyframes softFlicker {
+  0%, 100% { opacity: 0.85; transform: scale(1); }
+  35% { opacity: 0.98; transform: scale(1.06); }
+  68% { opacity: 0.72; transform: scale(0.96); }
+  85% { opacity: 0.92; transform: scale(1.02); }
+}
+
+@keyframes craneWarningPulse {
+  0%, 100% { opacity: 0.25; transform: scale(0.85); }
+  50% { opacity: 1.0; transform: scale(1.2); }
+}
+
+@keyframes lighthouseSweep {
+  0% { transform: rotate(-35deg); opacity: 0.45; }
+  50% { transform: rotate(45deg); opacity: 0.95; }
+  100% { transform: rotate(-35deg); opacity: 0.45; }
+}
+
+.animate-flicker {
+  animation: softFlicker 3.6s ease-in-out infinite;
+}
+
+.animate-crane-pulse {
+  animation: craneWarningPulse 2.2s ease-in-out infinite;
+}
+
+.animate-lighthouse-sweep {
+  animation: lighthouseSweep 9s ease-in-out infinite;
+  transform-origin: 0% 50%;
+}

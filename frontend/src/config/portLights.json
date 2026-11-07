@@ -1,0 +1,452 @@
+[
+  {
+    "x": 65.74,
+    "y": 62.83,
+    "is_warning": false,
+    "color": "#FFD479",
+    "id": "light-0",
+    "radius": 4.2,
+    "intensity": 0.92,
+    "type": "ambient-flicker"
+  },
+  {
+    "x": 67.69,
+    "y": 65.07,
+    "is_warning": false,
+    "color": "#FFD479",
+    "id": "light-1",
+    "radius": 4.2,
+    "intensity": 0.92,
+    "type": "ambient-flicker"
+  },
+  {
+    "x": 62.83,
+    "y": 60.78,
+    "is_warning": false,
+    "color": "#FFD479",
+    "id": "light-2",
+    "radius": 4.2,
+    "intensity": 0.91,
+    "type": "ambient-flicker"
+  },
+  {
+    "x": 54.44,
+    "y": 52.87,
+    "is_warning": false,
+    "color": "#FFD479",
+    "id": "light-3",
+    "radius": 4.2,
+    "intensity": 0.92,
+    "type": "ambient-flicker"
+  },
+  {
+    "x": 96.76,
+    "y": 71.23,
+    "is_warning": false,
+    "color": "#FFD479",
+    "id": "light-4",
+    "radius": 4.2,
+    "intensity": 0.89,
+    "type": "ambient-flicker"
+  },
+  {
+    "x": 69.06,
+    "y": 61.56,
+    "is_warning": false,
+    "color": "#FFD479",
+    "id": "light-5",
+    "radius": 4.2,
+    "intensity": 0.91,
+    "type": "ambient-flicker"
+  },
+  {
+    "x": 88.97,
+    "y": 67.51,
+    "is_warning": false,
+    "color": "#FFD479",
+    "id": "light-6",
+    "radius": 4.2,
+    "intensity": 0.88,
+    "type": "ambient-flicker"
+  },
+  {
+    "x": 93.51,
+    "y": 71.5,
+    "is_warning": false,
+    "color": "#FFD479",
+    "id": "light-7",
+    "radius": 4.2,
+    "intensity": 0.88,
+    "type": "ambient-flicker"
+  },
+  {
+    "x": 45.9,
+    "y": 48.52,
+    "is_warning": false,
+    "color": "#FFD479",
+    "id": "light-8",
+    "radius": 4.2,
+    "intensity": 0.91,
+    "type": "ambient-flicker"
+  },
+  {
+    "x": 90.23,
+    "y": 72.26,
+    "is_warning": false,
+    "color": "#FFD479",
+    "id": "light-9",
+    "radius": 4.2,
+    "intensity": 0.91,
+    "type": "ambient-flicker"
+  },
+  {
+    "x": 46.46,
+    "y": 51.41,
+    "is_warning": false,
+    "color": "#FFD479",
+    "id": "light-10",
+    "radius": 4.2,
+    "intensity": 0.92,
+    "type": "ambient-flicker"
+  },
+  {
+    "x": 48.65,
+    "y": 50.2,
+    "is_warning": false,
+    "color": "#FFD479",
+    "id": "light-11",
+    "radius": 4.2,
+    "intensity": 0.87,
+    "type": "ambient-flicker"
+  },
+  {
+    "x": 59.2,
+    "y": 58.69,
+    "is_warning": false,
+    "color": "#FFD479",
+    "id": "light-12",
+    "radius": 4.2,
+    "intensity": 0.93,
+    "type": "ambient-flicker"
+  },
+  {
+    "x": 66.38,
+    "y": 58.99,
+    "is_warning": false,
+    "color": "#FFD479",
+    "id": "light-13",
+    "radius": 4.2,
+    "intensity": 0.9,
+    "type": "ambient-flicker"
+  },
+  {
+    "x": 51.26,
+    "y": 51.43,
+    "is_warning": false,
+    "color": "#FFD479",
+    "id": "light-14",
+    "radius": 4.2,
+    "intensity": 0.92,
+    "type": "ambient-flicker"
+  },
+  {
+    "x": 71.37,
+    "y": 59.95,
+    "is_warning": false,
+    "color": "#FFD479",
+    "id": "light-15",
+    "radius": 4.2,
+    "intensity": 0.9,
+    "type": "ambient-flicker"
+  },
+  {
+    "x": 42.61,
+    "y": 48.55,
+    "is_warning": false,
+    "color": "#FFD479",
+    "id": "light-16",
+    "radius": 4.2,
+    "intensity": 0.91,
+    "type": "ambient-flicker"
+  },
+  {
+    "x": 46.86,
+    "y": 68.1,
+    "is_warning": false,
+    "color": "#FFD479",
+    "id": "light-17",
+    "radius": 4.2,
+    "intensity": 0.83,
+    "type": "ambient-flicker"
+  },
+  {
+    "x": 92.78,
+    "y": 73.68,
+    "is_warning": false,
+    "color": "#FFD479",
+    "id": "light-18",
+    "radius": 4.2,
+    "intensity": 0.89,
+    "type": "ambient-flicker"
+  },
+  {
+    "x": 73.32,
+    "y": 75.06,
+    "is_warning": false,
+    "color": "#FFD479",
+    "id": "light-19",
+    "radius": 4.2,
+    "intensity": 0.94,
+    "type": "ambient-flicker"
+  },
+  {
+    "x": 70.84,
+    "y": 68.13,
+    "is_warning": false,
+    "color": "#FFD479",
+    "id": "light-20",
+    "radius": 4.2,
+    "intensity": 0.94,
+    "type": "ambient-flicker"
+  },
+  {
+    "x": 87.15,
+    "y": 69.76,
+    "is_warning": false,
+    "color": "#FFD479",
+    "id": "light-21",
+    "radius": 4.2,
+    "intensity": 0.91,
+    "type": "ambient-flicker"
+  },
+  {
+    "x": 70.71,
+    "y": 71.86,
+    "is_warning": false,
+    "color": "#FFD479",
+    "id": "light-22",
+    "radius": 4.2,
+    "intensity": 0.93,
+    "type": "ambient-flicker"
+  },
+  {
+    "x": 24.25,
+    "y": 6.8,
+    "is_warning": false,
+    "color": "#FFD479",
+    "id": "light-23",
+    "radius": 4.2,
+    "intensity": 0.83,
+    "type": "ambient-flicker"
+  },
+  {
+    "x": 84.45,
+    "y": 62.82,
+    "is_warning": false,
+    "color": "#FFD479",
+    "id": "light-24",
+    "radius": 4.2,
+    "intensity": 0.83,
+    "type": "ambient-flicker"
+  },
+  {
+    "x": 44.12,
+    "y": 50.81,
+    "is_warning": false,
+    "color": "#FFD479",
+    "id": "light-25",
+    "radius": 4.2,
+    "intensity": 0.9,
+    "type": "ambient-flicker"
+  },
+  {
+    "x": 47.11,
+    "y": 71.26,
+    "is_warning": false,
+    "color": "#FFD479",
+    "id": "light-26",
+    "radius": 4.2,
+    "intensity": 0.82,
+    "type": "ambient-flicker"
+  },
+  {
+    "x": 85.25,
+    "y": 43.63,
+    "is_warning": false,
+    "color": "#FFD479",
+    "id": "light-27",
+    "radius": 4.2,
+    "intensity": 0.92,
+    "type": "ambient-flicker"
+  },
+  {
+    "x": 98.88,
+    "y": 68.36,
+    "is_warning": false,
+    "color": "#FFD479",
+    "id": "light-28",
+    "radius": 4.2,
+    "intensity": 0.85,
+    "type": "ambient-flicker"
+  },
+  {
+    "x": 69.21,
+    "y": 57.82,
+    "is_warning": false,
+    "color": "#FFD479",
+    "id": "light-29",
+    "radius": 4.2,
+    "intensity": 0.89,
+    "type": "ambient-flicker"
+  },
+  {
+    "x": 80.93,
+    "y": 41.85,
+    "is_warning": false,
+    "color": "#FFD479",
+    "id": "light-30",
+    "radius": 4.2,
+    "intensity": 0.84,
+    "type": "ambient-flicker"
+  },
+  {
+    "x": 77.55,
+    "y": 45.83,
+    "is_warning": false,
+    "color": "#FFD479",
+    "id": "light-31",
+    "radius": 4.2,
+    "intensity": 0.87,
+    "type": "ambient-flicker"
+  },
+  {
+    "x": 55.95,
+    "y": 59.64,
+    "is_warning": false,
+    "color": "#FFD479",
+    "id": "light-32",
+    "radius": 4.2,
+    "intensity": 0.84,
+    "type": "ambient-flicker"
+  },
+  {
+    "x": 63.02,
+    "y": 55.56,
+    "is_warning": false,
+    "color": "#FFD479",
+    "id": "light-33",
+    "radius": 4.2,
+    "intensity": 0.89,
+    "type": "ambient-flicker"
+  },
+  {
+    "x": 81.38,
+    "y": 61.93,
+    "is_warning": false,
+    "color": "#FFD479",
+    "id": "light-34",
+    "radius": 4.2,
+    "intensity": 0.86,
+    "type": "ambient-flicker"
+  },
+  {
+    "x": 71.81,
+    "y": 63.15,
+    "is_warning": false,
+    "color": "#FFD479",
+    "id": "light-35",
+    "radius": 4.2,
+    "intensity": 0.84,
+    "type": "ambient-flicker"
+  },
+  {
+    "x": 73.41,
+    "y": 46.99,
+    "is_warning": false,
+    "color": "#FFD479",
+    "id": "light-36",
+    "radius": 4.2,
+    "intensity": 0.83,
+    "type": "ambient-flicker"
+  },
+  {
+    "x": 82.51,
+    "y": 47.26,
+    "is_warning": false,
+    "color": "#FFD479",
+    "id": "light-37",
+    "radius": 4.2,
+    "intensity": 0.91,
+    "type": "ambient-flicker"
+  },
+  {
+    "x": 92.3,
+    "y": 51.94,
+    "is_warning": false,
+    "color": "#FFD479",
+    "id": "light-38",
+    "radius": 4.2,
+    "intensity": 0.86,
+    "type": "ambient-flicker"
+  },
+  {
+    "x": 55.57,
+    "y": 56.38,
+    "is_warning": false,
+    "color": "#FFD479",
+    "id": "light-39",
+    "radius": 4.2,
+    "intensity": 0.85,
+    "type": "ambient-flicker"
+  },
+  {
+    "x": 78.64,
+    "y": 59.42,
+    "is_warning": false,
+    "color": "#FFD479",
+    "id": "light-40",
+    "radius": 4.2,
+    "intensity": 0.89,
+    "type": "ambient-flicker"
+  },
+  {
+    "x": 52.16,
+    "y": 54.66,
+    "is_warning": false,
+    "color": "#FFD479",
+    "id": "light-41",
+    "radius": 4.2,
+    "intensity": 0.9,
+    "type": "ambient-flicker"
+  },
+  {
+    "x": 56.36,
+    "y": 42.13,
+    "is_warning": false,
+    "color": "#FFD479",
+    "id": "light-42",
+    "radius": 4.2,
+    "intensity": 0.87,
+    "type": "ambient-flicker"
+  },
+  {
+    "x": 81.67,
+    "y": 72.54,
+    "is_warning": false,
+    "color": "#FFD479",
+    "id": "light-43",
+    "radius": 4.2,
+    "intensity": 0.82,
+    "type": "ambient-flicker"
+  },
+  {
+    "x": 60.06,
+    "y": 60.7,
+    "is_warning": false,
+    "color": "#FFD479",
+    "id": "light-44",
+    "radius": 4.2,
+    "intensity": 0.9,
+    "type": "ambient-flicker"
+  }
+]

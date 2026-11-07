@@ -22,13 +22,20 @@ const Pill = ({
 function DecidePanel({
   meta
 }) {
-  const [params, setParams] = useState({
-    cargo_t: 150000,
-    port: "paradip",
-    origin: "ZA-RBA",
-    ship_class: "capesize",
-    window_weeks: 6,
-    wait_cost_per_t_week: 0.03
+  const [params, setParams] = useState(() => {
+    const sp = typeof window !== "undefined" ? new URLSearchParams(window.location.search) : new URLSearchParams();
+    return {
+      cargo_t: Number(sp.get("cargo_t")) || 150000,
+      port: sp.get("port") || "paradip",
+      origin: sp.get("origin") || "ZA-RBA",
+      ship_class: sp.get("ship_class") || "capesize",
+      window_weeks: Number(sp.get("window_weeks")) || 6,
+      wait_cost_per_t_week: Number(sp.get("wait_cost")) || 0.03
+    };
+  });
+  const [targetDate] = useState(() => {
+    const sp = typeof window !== "undefined" ? new URLSearchParams(window.location.search) : new URLSearchParams();
+    return sp.get("date") || null;
   });
   const [dec, setDec] = useState(null);
   const [fc, setFc] = useState(null);
@@ -60,7 +67,7 @@ function DecidePanel({
     [k]: e.target.value
   }));
   const isWait = dec?.recommendation === "WAIT";
-  return <div className="grid lg:grid-cols-[320px,1fr] gap-6" data-testid="decide-panel"><div className="hairline rounded-xl bg-ink-800/60 p-6 space-y-5 h-fit"><p className="font-display font-semibold text-lg tracking-tight">Voyage spec</p><Field label="Cargo (tonnes)"><input type="number" min={5000} max={400000} step={5000} value={params.cargo_t} onChange={set("cargo_t")} data-testid="input-cargo-quantity-input" className={selectCls + " font-mono tabular"} /></Field><Field label="Discharge port"><select value={params.port} onChange={set("port")} data-testid="input-port-select" className={selectCls}>{meta.ports.map(p => <option key={p.code} value={p.code}>{p.name}{p.mvp ? " · MVP" : ""}</option>)}</select></Field><Field label="Origin"><select value={params.origin} onChange={set("origin")} data-testid="input-origin-select" className={selectCls}>{meta.origins.map(o => <option key={o.code} value={o.code}>{o.label}</option>)}</select></Field><Field label="Ship class"><select value={params.ship_class} onChange={set("ship_class")} data-testid="input-ship-class-select" className={selectCls}>{meta.ship_classes.map(c => <option key={c.code} value={c.code}>{c.name} · {c.dwt.toLocaleString("en-US")} dwt</option>)}</select></Field><Field label={`Laycan window · ${params.window_weeks} weeks`}><input type="range" min={2} max={8} value={params.window_weeks} onChange={e => setParams(p => ({
+  return <div className="grid lg:grid-cols-[320px,1fr] gap-6" data-testid="decide-panel"><div className="hairline rounded-xl bg-ink-800/60 p-6 space-y-5 h-fit"><p className="font-display font-semibold text-lg tracking-tight">Voyage spec</p>{targetDate && <p className="text-[11px] font-mono text-beacon mt-0.5">Historical fixture: {targetDate}</p>}<Field label="Cargo (tonnes)"><input type="number" min={5000} max={400000} step={5000} value={params.cargo_t} onChange={set("cargo_t")} data-testid="input-cargo-quantity-input" className={selectCls + " font-mono tabular"} /></Field><Field label="Discharge port"><select value={params.port} onChange={set("port")} data-testid="input-port-select" className={selectCls}>{meta.ports.map(p => <option key={p.code} value={p.code}>{p.name}{p.mvp ? " · MVP" : ""}</option>)}</select></Field><Field label="Origin"><select value={params.origin} onChange={set("origin")} data-testid="input-origin-select" className={selectCls}>{meta.origins.map(o => <option key={o.code} value={o.code}>{o.label}</option>)}</select></Field><Field label="Ship class"><select value={params.ship_class} onChange={set("ship_class")} data-testid="input-ship-class-select" className={selectCls}>{meta.ship_classes.map(c => <option key={c.code} value={c.code}>{c.name} · {c.dwt.toLocaleString("en-US")} dwt</option>)}</select></Field><Field label={`Laycan window · ${params.window_weeks} weeks`}><input type="range" min={2} max={8} value={params.window_weeks} onChange={e => setParams(p => ({
           ...p,
           window_weeks: Number(e.target.value)
         }))} data-testid="input-laycan-date-picker" className="w-full" /></Field><Field label="Cost of waiting ($/t/week)"><input type="number" min={0} max={0.2} step={0.01} value={params.wait_cost_per_t_week} onChange={e => setParams(p => ({
