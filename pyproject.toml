@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "freightiq"
+version = "1.0.0"
+description = "Forecast-Driven Chartering Decision Support Platform for Indian East Coast Bulk Imports"
+readme = "README.md"
+requires-python = ">=3.10"
+
+[tool.vercel]
+entrypoint = "backend.main:app"
