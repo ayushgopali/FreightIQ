@@ -13,7 +13,7 @@ import {
   ShipClass
 } from '../types';
 
-const API_BASE = 'http://127.0.0.1:8000/api';
+const API_BASE = (import.meta as any).env?.VITE_API_BASE_URL || '/api';
 
 async function handleResponse<T>(res: Response): Promise<T> {
   if (!res.ok) {

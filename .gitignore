@@ -14,8 +14,9 @@ dist/
 downloads/
 eggs/
 .eggs/
-lib/
-lib64/
+/lib/
+/lib64/
+!frontend/src/lib/
 parts/
 sdist/
 var/
@@ -57,11 +58,6 @@ Thumbs.db
 *.log
 scratch/
 .system_generated/
-node_modules/
-dist/
-.venv/
-__pycache__/
-.env
 *.zip
 *.mp4
 docs/beat_verification/
